@@ -25,13 +25,13 @@ exports.handler = async (event, context) => {
     // Check the password on a POST request
     const params = new URLSearchParams(event.body);
     const password = params.get('password');
-    const validPasswords = ['example', 'test123', 'password'];
+    const validPasswords = ['qdulf', 'gamescom11', 'eimer'];
 
     if (validPasswords.includes(password)) {
       return {
         statusCode: 200,
         headers: { 'Content-Type': 'text/html' },
-        body: '<h1>Success: Password accepted!</h1>'
+        body: '<h1>Success: Password accepted!</h1><a href="https://docs.google.com/document/d/10SNxF9LLAY6YvTpkHBXHChXZY45_980gezaNB5Grq7M">Hinweis</a>'
       };
     } else {
       return {
