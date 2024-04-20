@@ -12,7 +12,8 @@ exports.handler = async (event, context) => {
           <title>Password Prompt</title>
         </head>
         <body>
-          <form action="/.netlify/functions/passwordChecker" method="post">
+	  <p>Das Passwort findet ihr in Max Gedächnis</p>
+          <form action="/.netlify/functions/passwordBib" method="post">
             <label for="password">Enter Password:</label>
             <input type="password" id="password" name="password">
             <button type="submit">Submit</button>
@@ -25,7 +26,7 @@ exports.handler = async (event, context) => {
     // Check the password on a POST request
     const params = new URLSearchParams(event.body);
     const password = params.get('password');
-    const validPasswords = ['qdulf', 'gamescom11', 'eimer'];
+    const validPasswords = ['qdulf', 'gamescom11', 'eimer', 'flux'];
 
     if (validPasswords.includes(password)) {
       return {

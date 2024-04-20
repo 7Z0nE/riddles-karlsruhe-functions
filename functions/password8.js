@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
           <title>Password Prompt</title>
         </head>
         <body>
-          <form action="/.netlify/functions/passwordChecker" method="post">
+          <form action="/.netlify/functions/password8" method="post">
 	    <p>
 Im Nebel der Physik, wo Kräfte verborgen und Geheimnisse sich verbergen,
 Dort liegt ein Grundsatz, der das Universum in seiner Essenz lenkt.

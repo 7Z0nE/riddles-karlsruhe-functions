@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
         </head>
         <body>
 	  <p>Ein Blick in die Vergangenheit gibt dir den Hinweis!</p>
-          <form action="/.netlify/functions/passwordChecker" method="post">
+          <form action="/.netlify/functions/passwordCat" method="post">
             <label for="password">Enter Password:</label>
             <input type="password" id="password" name="password">
             <button type="submit">Submit</button>
@@ -26,7 +26,7 @@ exports.handler = async (event, context) => {
     // Check the password on a POST request
     const params = new URLSearchParams(event.body);
     const password = params.get('password');
-    const validPasswords = ['Sphynx', 'Sphynx Katze'];
+    const validPasswords = ['Sphynx', 'Sphynx Katze', 'Sphinx', 'Sphinx Katze'];
 
     if (validPasswords.includes(password)) {
       return {
